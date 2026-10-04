@@ -1,0 +1,19 @@
+{
+  "name": "bridson-poisson-backend",
+  "version": "1.0.0",
+  "description": "Bridson 泊松圆盘采样与邻域拒绝解释后端（仅 API + CLI，TypeScript + Node.js 内置 SQLite）",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"dist/tests/**/*.test.js\"",
+    "start": "node dist/src/cli.js serve",
+    "demo": "npm run build && node dist/src/cli.js demo"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "typescript": "^5.9.0"
+  }
+}
